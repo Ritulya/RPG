@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+ <head>
+   <meta charset="utf-8" />
+   <title>RPG</title>
+   <link href="rpg.css" rel="stylesheet" />
+   <!--<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>-->
+   <script src="jquery-v3.6.4.js"></script>
+   <script src="init.js"></script>
+   <script src="listeners.js"></script>
+   <script src="scenes.js"></script>
+   <script>
+    $(document).ready ( function() {
+		$('#rpg').initScene_utochka(0, 0);
+		//$('#rpg').data('score', 0);
+	})
+   </script>
+ </head>
+ <body>
+    <div id="rpg">
+      <div id="scene">
+
+	    <!-- persons -->
+		  <div id="sova" name="Сова" class="sceneObj person"><img src="img/persons/owl.png" /></div>
+		  <div id="utochka" name="Уточка" class="sceneObj person"><img src="img/persons/duck.png" /></div>
+		  <div id="opossums" name="Опоссумы" class="sceneObj person"><img id="opos_img" src="img/persons/home_opos.png" /></div>
+		  <div id="ovechka" name="Овечка" class="sceneObj person"><img src="img/persons/ovechka.png" /></div>
+		  <div id="medved" name="Медведь" class="sceneObj person"><img src="img/persons/medved.png" /></div>
+		  <div id="hrustina" name="Свинка" class="sceneObj person"><img id="pig_img" src="img/persons/pig_pugovka.png" /></div>
+		  <div id="zhaba" name="Жаб" class="sceneObj person"><img src="img/persons/zhaba.png" /></div>
+		<!-- <div id="bear" name="Медведь" class="sceneObj person"><img src="img/persons/bear.png" /></div>	-->
+
+		<!-- tools -->
+		  <div id="mashroom-belyi" name="Белый гриб - очень вкусный" class="sceneObj tool"><img src="img/tools/mashroom-belyi.png" /></div>
+		  <div id="mashroom-violet-poisonous" name="Странный гриб фиолетового цвета. Стоит ли его брать?" class="sceneObj tool"><img src="img/tools/mashroom-violet-poisonous.png" /></div>
+		  <div id="flask" name="Фляжка (то ли с водой, то ли с иной жидкостью - надо задуматься...). А вдруг пригодится?" class="sceneObj tool"><img src="img/tools/flask.png" /></div>
+
+		<!-- things -->
+		  <div id="mushroom-podosinoviki" name="Подосиновики - хорошие грибы" class="sceneObj thing"><img src="img/things/mushroom-podosinoviki.png" /></div>
+		  <div id="mushroom-volnushka" name="Волнушка - прекрасный гриб для засолки" class="sceneObj thing"><img src="img/things/mushroom-volnushka.png" /></div>
+		  <div id="derevo" class="sceneObj thing"><img src="img/things/derevo.png" /></div>
+		  <div id="ut_dom" class="sceneObj thing"><img src="img/persons/ut_dom.png" /></div>
+
+		  <div id='transition1' class="sceneObj transition"><img src="img/icons/transition1.png" /></div>
+		  <div id='transition2' class="sceneObj transition"><img src="img/icons/transition2.png" /></div>
+		  <div id='transition3' class="sceneObj transition"><img src="img/icons/transition3.png" /></div>
+
+
+		  <!-- empty -->
+		  <div id="empty"></div>
+
+		  <div id="dialog">
+			  <div id="textDialog"></div>
+			  <img src="img/icons/dalee.png" id="dialogDalee">
+			  <div id="answers"></div>
+		  </div>
+	  </div>
+
+	  <div id="hero">
+	    <img id="cat" src="img/hero/cat.png" />
+	  </div>
+
+	  <div id="toolsPanel"></div>
+
+
+	  <div id="score">
+	    <div id="gameIndicator">gameIndicator <span class="score">0</span></div>
+	    <div id="sceneScore">sceneScore <span class="score">0</span></div>
+		<div id="toolsScore">toolsScore <span class="score">0</span></div>
+		<div id="personScore">personsScore <span class="score">0</span></div>
+		<!--  и что-нибудь ещё... -->
+	  </div>
+    </div>
+ </body>
+</html> 
